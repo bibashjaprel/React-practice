@@ -1,0 +1,148 @@
+.header {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(0, 0, 19);
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1
+  }
+  
+  .nav {
+    padding: 1.6rem 0
+  }
+  
+  .nav.fix-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--customColor);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    z-index: 999;
+  }
+  
+  .nav.fix-nav .logo h1 span {
+    color: #fff
+  }
+  
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo h1 {
+    font-size: 2.5rem;
+    color: #fff;
+  }
+  
+  .logo h1 span {
+    font-weight: bold;
+    color: var(--customColor);
+  }
+  
+  .nav-list {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item:not(:last-child) {
+    margin-right: .5rem;
+  }
+  
+  .nav-link:link,
+  .nav-link:visited {
+    color: #fff;
+    padding: .8rem 1rem;
+    transition: all 300ms ease-in-out;
+  }
+  
+  .nav-link:hover {
+    border-radius: .3rem;
+    background-color: var(--customColor);
+  }
+  
+  .hamburger,
+  .top-nav {
+      display: none;
+  }
+  
+  @media only screen and (max-width: 768px) {
+      .menu {
+          position: fixed;
+          top: 0;
+          left: -100%;
+          width: 0%;
+          max-width: 35rem;
+          height: 100%;
+          background-color: #fff;
+          transition: all 500ms ease-in-out;
+          z-index: 100;
+      }
+      .menu.show {
+          left: 0;
+          width: 100%;
+      }
+  
+      .top-nav {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          background-color: var(--customColor);
+          padding: 1rem 1.6rem;
+      }
+  
+      .logo h1 span,
+      .top-nav .close {
+          color: #fff;
+      }
+  
+      .hamburger,
+      .top-nav .close {
+          display: block;
+          color: #fff;
+          font-size: 2.3rem;
+          padding: .5rem;
+          cursor: pointer;
+      }
+  
+      .nav-link:link,
+      .nav-link:visited {
+          display: block;
+          font-size: 1.7rem;
+          color: #222;
+          padding: 1rem 0;
+      }
+  
+      .nav-list {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 1rem 1.6rem;
+      }
+      body.show::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, .8);
+          z-index: 1;
+      }
+  
+      .nav.show {
+          background-color: rgba(0, 0, 0, .8);
+      }
+  
+  }
+  

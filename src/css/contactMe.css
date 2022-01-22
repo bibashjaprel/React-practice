@@ -1,0 +1,98 @@
+.contact-center{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  
+  .left h2{
+    font-size: 2.5rem;
+  }
+  
+  
+  .left p{
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  
+  .left div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .left div .content{
+    text-align: left;
+  }
+  
+  .left .icon{
+    margin-right: 2rem;
+    font-size: 2.3rem;
+    color: var(--customColor);
+  }
+  
+  form h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form input,.form textarea{
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  text-indent: 1rem;
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  border: 1px solid #ccc;
+  }
+  
+  .form .right div{
+    display: flex;
+  }
+  
+  .form .right div input{
+    flex: 1 1 50%;
+  }
+  
+  .form textarea{
+    width: 100%;
+    resize: vertical;
+    margin-bottom: 3rem;
+  }
+  
+  
+  @media only screen and (max-width: 768px){
+    .contact-center{
+      grid-template-columns: 1fr;
+    }
+  
+    .contact-center .left{
+      text-align: left;
+    }
+  
+    .left div .content h3{
+      font-size: 1.6rem;
+    }
+  
+    .left div .content span{
+      font-size: 1.5rem;
+    }
+  }
+  
+  
+  footer{
+    background-color: #000;
+    padding: 1.6rem 1rem;
+    text-align: center; 
+  }
+  
+  footer p{
+    color: white;
+  }
+  
+  footer p span{
+    color: var(--customColor);
+  }
+  

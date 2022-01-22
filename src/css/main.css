@@ -1,0 +1,91 @@
+.section {
+    padding: 5rem 0 7rem 0;
+    overflow-x: hidden;
+  }
+  
+  .about {
+    margin-top: 5rem;
+  }
+  
+  .about-center {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 3rem 5rem;
+  }
+  
+  .title {
+    margin: 4rem 0 7rem 0;
+    text-align: center;
+  }
+  
+  .title h1 {
+    font-size: 3rem;
+    display: inline-block;
+    position: relative;
+    z-index: 0;
+  }
+  
+  .title h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -20%;
+    transform: translate(-50%, -50%);
+    background-color: var(--customColor);
+    width: 50%;
+    height: .4rem;
+    z-index: 1;
+  }
+  
+  
+  .left img {
+    height: 40rem;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .right h1 {
+    margin-bottom: 2rem;
+  }
+  
+  .right p {
+    line-height: 2;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .right h1 span {
+    color: var(--customColor);
+  }
+  
+  
+  a.btn,
+  .btn-form {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--customColor);
+    color: #fff;
+    border-radius: .5rem;
+    border: 2px solid var(--customColor);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+    transition: all 300ms ease-in-out;
+  }
+  
+  a.btn:hover,
+  .btn-form:hover {
+    transform: translateY(-3px);
+    background-color: transparent;
+    color: inherit;
+  }
+  a.btn:active,
+  .btn-form:active {
+    transform: translateY(0);
+  }
+  @media only screen and (max-width: 768px){
+    .about-center {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem 4rem;
+      }
+  }
+  
